@@ -7,7 +7,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&amp;display=swap"
       rel="stylesheet"
     />
     <link rel="stylesheet" href="css/style.css" />
@@ -176,5 +176,35 @@
         </ol>
       </div>
     </article>
+
+    <footer class="site-footer">
+      <div class="footer-inner">
+        <div class="footer-copy">
+          <p class="footer-kicker">Stay in the loop</p>
+          <h2>New music,<br />straight to your inbox.</h2>
+        </div>
+
+        <form class="newsletter-form" action="#" method="post">
+          <label for="newsletter-email">Email address</label>
+          <div class="newsletter-fields">
+            <input
+              id="newsletter-email"
+              name="email"
+              type="email"
+              autocomplete="email"
+              placeholder="you@example.com"
+              required
+            />
+            <button type="submit">Subscribe</button>
+          </div>
+          <p>Occasional notes from Stretch Records. No noise, no spam.</p>
+        </form>
+      </div>
+
+      <div class="footer-bottom">
+        <strong>Stretch Records</strong>
+        <span>&copy; 2026 Stretch Records</span>
+      </div>
+    </footer>
   </body>
 </html>
