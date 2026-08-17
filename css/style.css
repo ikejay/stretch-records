@@ -308,34 +308,44 @@ nav a p:last-child {
 }
 
 .newsletter-fields {
-  display: flex;
-  border-bottom: 1px solid rgba(244, 243, 242, 0.55);
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 20px;
 }
 
-.newsletter-fields input {
+.form-field {
   min-width: 0;
-  flex: 1;
-  padding: 14px 0;
+}
+
+.newsletter-fields input,
+.newsletter-fields select {
+  width: 100%;
+  min-width: 0;
+  padding: 12px 0;
   border: 0;
+  border-bottom: 1px solid rgba(244, 243, 242, 0.55);
+  border-radius: 0;
   outline: 0;
   background: transparent;
   color: var(--bg);
   font: inherit;
 }
 
-.newsletter-fields input::placeholder {
-  color: rgba(244, 243, 242, 0.45);
+.newsletter-fields select {
+  color-scheme: dark;
 }
 
-.newsletter-fields input:focus-visible {
+.newsletter-fields input:focus-visible,
+.newsletter-fields select:focus-visible {
   box-shadow: 0 2px 0 var(--accent);
 }
 
 .newsletter-fields button {
-  border: 0;
-  padding: 0 4px;
-  background: transparent;
-  color: var(--bg);
+  justify-self: start;
+  border: 1px solid var(--bg);
+  padding: 12px 18px;
+  background: var(--bg);
+  color: var(--text);
   font: inherit;
   font-size: 0.78rem;
   font-weight: 800;
@@ -346,7 +356,14 @@ nav a p:last-child {
 
 .newsletter-fields button:hover,
 .newsletter-fields button:focus-visible {
-  color: var(--accent);
+  border-color: var(--accent);
+  background: var(--accent);
+  color: var(--bg);
+}
+
+.newsletter-fields button:focus-visible {
+  outline: 3px solid var(--bg);
+  outline-offset: 3px;
 }
 
 .newsletter-form > p {
@@ -385,6 +402,10 @@ nav a p:last-child {
   .footer-inner {
     grid-template-columns: 1fr;
     gap: 48px;
+  }
+
+  .newsletter-fields {
+    grid-template-columns: 1fr;
   }
 }
 

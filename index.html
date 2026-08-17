@@ -184,17 +184,42 @@
           <h2>New music,<br />straight to your inbox.</h2>
         </div>
 
-        <form class="newsletter-form" action="#" method="post">
-          <label for="newsletter-email">Email address</label>
+        <form class="newsletter-form" action="" method="get">
           <div class="newsletter-fields">
-            <input
-              id="newsletter-email"
-              name="email"
-              type="email"
-              autocomplete="email"
-              placeholder="you@example.com"
-              required
-            />
+            <div class="form-field">
+              <label for="newsletter-name">Name</label>
+              <input
+                id="newsletter-name"
+                name="name"
+                type="text"
+                autocomplete="name"
+                required
+              />
+            </div>
+
+            <div class="form-field">
+              <label for="newsletter-email">Email address</label>
+              <input
+                id="newsletter-email"
+                name="email"
+                type="email"
+                autocomplete="email"
+                required
+              />
+            </div>
+
+            <div class="form-field">
+              <label for="newsletter-genre">Favorite genre</label>
+              <select id="newsletter-genre" name="genre" required>
+                <option value="">Choose a genre</option>
+                <option value="childrens-music">Children's music</option>
+                <option value="italian-pop">Italian pop</option>
+                <option value="afrobeats">Afrobeats</option>
+                <option value="hip-hop">Hip-hop</option>
+                <option value="country">Country</option>
+              </select>
+            </div>
+
             <button type="submit">Subscribe</button>
           </div>
           <p>Occasional notes from Stretch Records. No noise, no spam.</p>
